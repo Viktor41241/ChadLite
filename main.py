@@ -21,3 +21,21 @@ def main():
         search_product(input('Введите название товара: '))
 
 main()
+
+def input_int(massage):
+    while True:
+        try:
+            number = int(input(massage))
+            return number 
+        except ValueError:
+            print("Ошибка! Введите целое число.")
+
+def show_product(product):
+    print(
+      f'ID: {product["id"]} | '
+      f'Название: {product["name"]} | '
+      f'Категория: {product["category"]} | '
+      f'Цена: {product["price"]} | ' 
+      f'Количество: {product["quantity"]} | ' 
+    )            
+    
